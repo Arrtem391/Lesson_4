@@ -23,6 +23,6 @@ middle_green = green.crop(middle_coordinates)
 red_mix = Image.blend(left_red, middle_red, 0.5)
 blue_mix = Image.blend(right_blue, middle_blue, 0.5)
 
-final_image = Image.merge("RGB", (red_mix, blue_mix, middle_green))
+final_image = Image.merge("RGB", (red_mix, middle_green, blue_mix))
 final_image.thumbnail((80, 80)) 
 final_image.save('final_image.jpg') 
